@@ -1,0 +1,17 @@
+.nav {
+    font-weight: 500;
+    font-size: 20px;
+
+    ul {
+        display: flex;
+        gap: 1rem;
+
+        li {
+            list-style: none;
+            a {
+                color: black;
+                text-decoration: none;
+            }
+        }
+    }
+}

@@ -1,7 +1,8 @@
-import { Nav } from './Nav';
+import { Nav } from '../nav';
+import style from './style.module.css';
 
 const Header = () => (
-    <header>
+    <header className={style.header}>
         <img src='/Logo.svg' alt='Logo'/>
         <Nav />
     </header>
