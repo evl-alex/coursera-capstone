@@ -6,11 +6,6 @@ body {
   font-weight: 400;
 }
 
-.main {
-  display: flex;
-  justify-content: center;
-}
-
 .title {
   font-family: 'Markazi Text', sans-serif;
   font-size: 64px;
@@ -39,4 +34,9 @@ body {
 .card-title {
   font-weight: 600;
   font-size: 18px;
+}
+
+a.active {
+  background-color: #f6f8f6;
+  font-weight: 700;
 }
