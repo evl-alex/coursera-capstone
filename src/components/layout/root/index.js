@@ -1,6 +1,6 @@
 import style from './style.module.css';
 import { Header } from '../../header';
-import { Footer } from '../../Footer';
+import { Footer } from '../../footer';
 
 const Layout = ({ children }) => (
     <main className={style.main}>
