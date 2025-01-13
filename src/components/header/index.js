@@ -1,9 +1,9 @@
 import { Nav } from '../nav';
-import style from './style.module.css';
+import './style.css';
 import { Link } from 'react-router';
 
 const Header = () => (
-    <header className={style.header}>
+    <header className='header'>
         <Link to='/'>
             <img src='/img/Logo.svg' alt='Logo'/>
         </Link>

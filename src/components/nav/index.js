@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router';
-import style from './style.module.css';
+import './style.css';
 
 const Nav = () => (
-    <nav className={style.nav}>
+    <nav className='nav'>
         <ul>
             <li>
                 <NavLink to='/'>

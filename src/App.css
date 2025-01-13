@@ -2,23 +2,37 @@
 
 body {
   font-family: 'Karla', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
+
+  --color-primary-dark: #495E57;
+  --color-primary-light: #F4CE14;
+  --color-secondary-1: #EE9972;
+  --color-secondary-2: #FBDABB;
+  --color-secondary-3: #EDEFEE;
+}
+
+p {
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .title {
   font-family: 'Markazi Text', sans-serif;
   font-size: 64px;
+  color: var(--color-primary-light);
 }
 
 .sub-title {
   font-family: 'Markazi Text', sans-serif;
   font-size: 40px;
+  color: var(--color-secondary-3);
 }
 
 .lead-text {
-  font-size: 18px;
-  font-weight: 800;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-secondary-3);
 }
 
 .section-title {
@@ -33,10 +47,5 @@ body {
 
 .card-title {
   font-weight: 600;
-  font-size: 18px;
-}
-
-nav a.active {
-  background-color: #f6f8f6;
-  font-weight: 700;
+  font-size: 16px;
 }

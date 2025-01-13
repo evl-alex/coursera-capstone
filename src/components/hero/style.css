@@ -1,0 +1,39 @@
+.hero {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    gap: 15%;
+
+    .hero-about {
+        min-width: 280px;
+        width: 25%;
+    }
+
+    .title {
+        margin-top: 35px;
+    }
+
+    .sub-title {
+        margin-top: -30px;
+        margin-bottom: 20px;
+    }
+
+    .lead-text {
+        margin-bottom: 80px;
+    }
+
+    img {
+        margin-top: 20px;
+        width: 18rem;
+        border-radius: 8px;
+    }
+}
+
+.hero-background {
+    position: absolute;
+    height: 420px;
+    width: 100vw;
+    background-color: rgba(110, 110, 110, 0.9);
+    z-index: -1;
+}

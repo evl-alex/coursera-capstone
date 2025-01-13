@@ -1,13 +1,13 @@
-import style from './style.module.css';
+import './style.css';
 import { Header } from '../../header';
 import { Footer } from '../../footer';
 
 const Layout = ({ children }) => (
-    <main className={style.main}>
+    <div className='main'>
         <Header />
         {children}
         <Footer />
-    </main>
+    </div>
 );
 
 export { Layout };

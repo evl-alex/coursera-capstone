@@ -1,6 +1,11 @@
 .nav {
     font-weight: 500;
-    font-size: 20px;
+    font-size: 16px;
+
+    a.active {
+        background-color: #f6f8f6;
+        font-weight: 700;
+    }
 
     ul {
         display: flex;
@@ -20,7 +25,7 @@
             }
 
             a:hover {
-                background-color: #EDEFEE;
+                background-color: var(--color-secondary-3);
             }
         }
     }

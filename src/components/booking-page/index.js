@@ -1,7 +1,7 @@
 const BookingPage = () => (
-    <div>
+    <main>
         <p>here comes the booking page</p>
-    </div>
+    </main>
 );
 
 export { BookingPage };

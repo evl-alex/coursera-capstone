@@ -1,6 +1,19 @@
+import { Button } from '../common/button';
+import './style.css';
+
 const Hero = () => (
-    <section>
-        <p>sometimes referred to as the jumbotron or the hero, this component is the call-to-action section that guides the user to click a call-to-action button while enticing them to do so in as few words as possible</p>
+    <section className='hero'>
+        <div className='hero-background' />
+        <div className='hero-about'>
+            <p className='title'>Little Lemon</p>
+            <p className='sub-title'>Chicago</p>
+            <p className='lead-text'>
+                We are a family owned Mediterranean restaurant, focused on
+                traditional recipes served with a modern twist.
+            </p>
+            <Button>Reserve a Table</Button>
+        </div>
+        <img src='/img/food.jpg' alt='Food'/>
     </section>
 );
 

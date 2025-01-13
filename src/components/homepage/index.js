@@ -4,12 +4,12 @@ import { CustomersSay } from '../customers-say';
 import { Chicago } from '../chicago';
 
 const Homepage = () => (
-    <div>
+    <main>
         <Hero />
         <Specials />
         <CustomersSay />
         <Chicago />
-    </div>
+    </main>
 );
 
 export { Homepage };
