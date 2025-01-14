@@ -14,7 +14,8 @@ const Hero = () => (
                 </p>
                 <Button>Reserve a Table</Button>
             </div>
-            <img src='/img/food.jpg' alt='Food'/></div>
+            <img src='/img/food.jpg' alt='Food'/>
+        </div>
     </section>
 );
 
