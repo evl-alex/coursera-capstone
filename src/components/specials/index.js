@@ -1,6 +1,12 @@
+import './style.css';
+import { Button } from '../common/button';
+
 const Specials = () => (
-    <section>
-        <p>The component that loops over the specials that come from a data source</p>
+    <section className='specials'>
+        <div className='heading'>
+            <h2 className='title'>This week specials!</h2>
+            <Button>Online Menu</Button>
+        </div>
     </section>
 );
 

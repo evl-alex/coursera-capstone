@@ -1,6 +1,14 @@
 .button {
-    padding: 20px 24px;
+    height: fit-content;
+    padding: 16px 24px;
     border: none;
     border-radius: 14px;
     background-color: var(--color-primary-light);
+    transition: all 0.3s;
+}
+
+.button:hover {
+    cursor: pointer;
+    color: var(--color-primary-light);
+    background-color: var(--color-primary-dark);
 }

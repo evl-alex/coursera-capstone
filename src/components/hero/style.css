@@ -4,6 +4,13 @@
     display: flex;
     justify-content: center;
     gap: 15%;
+    margin-bottom: 8px;
+
+    .hero-content {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+    }
 
     .hero-about {
         min-width: 280px;
@@ -12,6 +19,8 @@
 
     .title {
         margin-top: 35px;
+        margin-bottom: 8px;
+        color: var(--color-primary-light);
     }
 
     .sub-title {
