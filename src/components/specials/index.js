@@ -24,7 +24,7 @@ const dishes = [
 ]
 
 const Specials = () => (
-    <section className='specials'>
+    <section className='specials section-container'>
         <div className='heading'>
             <h2 className='title'>This week specials!</h2>
             <Button>Online Menu</Button>

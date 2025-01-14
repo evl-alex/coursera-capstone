@@ -12,6 +12,12 @@ body {
   --color-secondary-3: #EDEFEE;
 }
 
+.section-container {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 p, h2 {
   margin-top: 8px;
   margin-bottom: 8px;
