@@ -1,0 +1,33 @@
+.feedback {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 24px;
+    background-color: white;
+    border-radius: 16px;
+    transition: transform 0.3s;
+
+    .feedback-highlighted-text {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .feedback-user-info {
+        display: flex;
+        align-items: center;
+
+        > img {
+            width: 50px;
+            margin-right: 8px;
+            border-radius: 50%;
+        }
+    }
+
+    h5, p {
+        margin: 0;
+    }
+}
+
+.feedback:hover {
+    transform: scale(1.04);
+}

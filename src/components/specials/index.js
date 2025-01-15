@@ -30,7 +30,7 @@ const Specials = () => (
             <Button>Online Menu</Button>
         </div>
         <div className='specials-cards'>
-            {dishes.map(dish => <DishCard {...dish} />)}
+            {dishes.map((dish, index) => <DishCard {...dish} key={index} />)}
         </div>
     </section>
 );
