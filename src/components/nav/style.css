@@ -3,7 +3,7 @@
     font-size: 16px;
 
     a.active {
-        background-color: #f6f8f6;
+        background-color: var(--color-primary-light);
         font-weight: 700;
     }
 
@@ -19,14 +19,15 @@
             a {
                 display: block;
                 padding: 8px;
-                border-radius: 0.5rem;
+                border-radius: 8px;
 
                 color: black;
                 text-decoration: none;
             }
 
             a:hover {
-                background-color: var(--color-secondary-3);
+                background-color: #495E57;
+                color: var(--color-primary-light);
                 transition: all 0.3s;
             }
         }
