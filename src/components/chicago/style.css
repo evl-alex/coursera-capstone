@@ -1,0 +1,49 @@
+.chicago {
+    display: flex;
+    padding: 40px 0;
+    gap: 5%;
+
+    .chicago-text {
+        width: 50%;
+
+        h2 {
+            color: black;
+            line-height: 35px;
+        }
+        h3 {
+            color: #333333;
+            line-height: 35px;
+            margin-bottom: 50px;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 18px;
+        }
+    }
+
+    .chicago-images {
+        width: 50%;
+        min-width: 420px;
+        position: relative;
+        height: 440px;
+
+        img {
+            position: absolute;
+            height: 340px;
+            width: 270px;
+            object-fit: cover;
+        }
+
+        .chicago-images-top {
+            top: 0;
+            right: 0;
+            z-index: 2;
+        }
+
+        .chicago-images-bottom {
+            top: 100px;
+            right: 30%;
+        }
+    }
+}

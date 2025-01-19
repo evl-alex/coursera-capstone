@@ -18,7 +18,7 @@ body {
   margin: 0 auto;
 }
 
-p, h2 {
+p, h2, h3 {
   margin-top: 8px;
   margin-bottom: 8px;
 }
