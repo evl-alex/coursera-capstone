@@ -12,12 +12,6 @@ body {
   --color-secondary-3: #EDEFEE;
 }
 
-.section-container {
-  width: 80%;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
 p, h2, h3 {
   margin-top: 8px;
   margin-bottom: 8px;
@@ -55,4 +49,24 @@ p, h2, h3 {
   font-family: 'Karla', sans-serif;
   font-weight: 700;
   font-size: 16px;
+}
+
+.section-container {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-background-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.section-background {
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  background-color: #D9D9D9;
+  z-index: -1;
 }

@@ -25,9 +25,9 @@ const feedbackList = [
 ]
 
 const CustomersSay = () => (
-    <section className='customers-say'>
-        <div className='customers-say-background'/>
-        <div className='customers-say-content section-container'>
+    <section className='section-background-container'>
+        <div className='section-background' />
+        <div className='section-container customers-say-content'>
             <h2>Testimonials</h2>
             <div className='customers-say-reviews'>
                 {feedbackList.map((feedback, index) => (<Feedback {...feedback} key={index} />))}

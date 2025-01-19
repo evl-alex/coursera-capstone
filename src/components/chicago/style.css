@@ -1,5 +1,6 @@
 .chicago {
     display: flex;
+    align-items: center;
     padding: 40px 0;
     gap: 5%;
 
