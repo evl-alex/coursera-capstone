@@ -1,4 +1,5 @@
 import { useReducer, useState } from 'react';
+import { fetchAPI } from '../../utils/api'
 import { BookingForm } from '../booking-form';
 import './style.css';
 
@@ -11,6 +12,13 @@ export const defaultTimes = [
     '22:00',
 ];
 
+const defaultValues = {
+    date: '',
+    time: '17:00',
+    guests: '1',
+    occasion: 'Birthday',
+};
+
 export const updateTimesActions = {
     dateChange: 'dateChange',
 }
@@ -18,25 +26,21 @@ export const updateTimesActions = {
 export const updateTimes = (state, action) => {
     switch (action.type) {
         case updateTimesActions.dateChange: {
-            return state
+            return fetchAPI(new Date(action.date));
+        }
+        default: {
+            return state;
         }
     }
-
-    throw Error('Unknown action: ' + action.type);
 };
 
 export const initializeTimes = () => {
-    return defaultTimes;
+    return fetchAPI(new Date());
 };
 
 const BookingPage = () => {
-    const [bookingValues, setBookingValues] = useState({
-        date: '',
-        time: '17:00',
-        guests: '1',
-        occasion: 'Birthday',
-    })
-    const [availableTimes, dispatchAvailableTimes] = useReducer(updateTimes, initializeTimes());
+    const [bookingValues, setBookingValues] = useState(defaultValues);
+    const [availableTimes, dispatchAvailableTimes] = useReducer(updateTimes,  initializeTimes());
 
     return (
         <main>

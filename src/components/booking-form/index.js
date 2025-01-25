@@ -2,11 +2,12 @@ import './style.css';
 import { useCallback } from 'react';
 import { Button } from '../common/button';
 import { updateTimesActions } from '../booking-page';
+import { submitAPI } from '../../utils/api'
 
 const BookingForm = ({ availableTimes, values, setValues, onDateChange }) => {
     const handleSubmit = useCallback((e) => {
         e.preventDefault();
-        console.log('Submitting...', values);
+        submitAPI(values);
     }, [values]);
 
     return (
@@ -19,7 +20,7 @@ const BookingForm = ({ availableTimes, values, setValues, onDateChange }) => {
                     value={values.date}
                     onChange={(e) => {
                         setValues((prev) => ({ ...prev, date: e.target.value }));
-                        onDateChange({ type: updateTimesActions.dateChange, newDate: e.target.value });
+                        onDateChange({ type: updateTimesActions.dateChange, date: e.target.value });
                     }}
                 />
             </fieldset>
