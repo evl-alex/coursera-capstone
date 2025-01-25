@@ -1,0 +1,22 @@
+.booking-form {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 40px;
+
+    .title {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        color: var(--color-primary-light);
+    }
+}
+
+.booking-background {
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    background-color: rgba(110, 110, 110, 0.9);
+    z-index: -1;
+}

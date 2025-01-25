@@ -1,25 +1,12 @@
 import './style.css';
-import { useCallback, useState } from 'react';
+import { useCallback } from 'react';
 import { Button } from '../common/button';
 
-const BookingForm = () => {
-    const [availableTimes, setAvailableTimes] = useState([
-        '17:00',
-        '18:00',
-        '19:00',
-        '20:00',
-        '21:00',
-        '22:00',
-    ]);
-    const [date, setDate] = useState('');
-    const [time, setTime] = useState(availableTimes[0]);
-    const [guests, setGuests] = useState(1);
-    const [occasion, setOccasion] = useState('Birthday');
-
+const BookingForm = ({ availableTimes, values, setValues, onDateChange }) => {
     const handleSubmit = useCallback((e) => {
         e.preventDefault();
-        console.log('Submitting...', date, time, guests, occasion);
-    }, [date, time, guests, occasion]);
+        console.log('Submitting...', values);
+    }, [values]);
 
     return (
         <section className='booking-form'>
@@ -31,16 +18,19 @@ const BookingForm = () => {
                     <input
                         type='date'
                         id='res-date'
-                        value={date}
-                        onChange={(e) => setDate(e.target.value)}
+                        value={values.date}
+                        onChange={(e) => {
+                            setValues((prev) => ({ ...prev, date: e.target.value }));
+                            onDateChange({ type: 'dateChange', newDate: e.target.value });
+                        }}
                     />
                 </fieldset>
                 <fieldset>
                     <label htmlFor='res-time'>Choose time</label>
                     <select
                         id='res-time'
-                        value={time}
-                        onChange={(e) => setTime(e.target.value)}
+                        value={values.time}
+                        onChange={(e) => setValues((prev) => ({ ...prev, time: e.target.value }))}
                     >
                         {availableTimes.map((option, index) => (
                             <option key={index}>{option}</option>
@@ -55,16 +45,16 @@ const BookingForm = () => {
                         min='1'
                         max='10'
                         id='guests'
-                        value={guests}
-                        onChange={(e) => setGuests(e.target.value)}
+                        value={values.guests}
+                        onChange={(e) => setValues((prev) => ({ ...prev, guests: e.target.value }))}
                     />
                 </fieldset>
                 <fieldset>
                     <label htmlFor='occasion'>Occasion</label>
                     <select
                         id='occasion'
-                        value={occasion}
-                        onChange={(e) => setOccasion(e.target.value)}
+                        value={values.occasion}
+                        onChange={(e) => setValues((prev) => ({ ...prev, occasion: e.target.value }))}
                     >
                         <option>Birthday</option>
                         <option>Anniversary</option>
