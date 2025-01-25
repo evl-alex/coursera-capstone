@@ -2,7 +2,7 @@ import { useReducer, useState } from 'react';
 import { BookingForm } from '../booking-form';
 import './style.css';
 
-const defaultTimes = [
+export const defaultTimes = [
     '17:00',
     '18:00',
     '19:00',
@@ -11,6 +11,24 @@ const defaultTimes = [
     '22:00',
 ];
 
+export const updateTimesActions = {
+    dateChange: 'dateChange',
+}
+
+export const updateTimes = (state, action) => {
+    switch (action.type) {
+        case updateTimesActions.dateChange: {
+            return state
+        }
+    }
+
+    throw Error('Unknown action: ' + action.type);
+};
+
+export const initializeTimes = () => {
+    return defaultTimes;
+};
+
 const BookingPage = () => {
     const [bookingValues, setBookingValues] = useState({
         date: '',
@@ -18,19 +36,6 @@ const BookingPage = () => {
         guests: '1',
         occasion: 'Birthday',
     })
-    const updateTimes = (state, action) => {
-        switch (action.type) {
-            case 'dateChange': {
-                setBookingValues((prev) => ({ ...prev, time: state[0] }));
-                return state
-            }
-        }
-
-        throw Error('Unknown action: ' + action.type);
-    };
-    const initializeTimes = () => {
-        return defaultTimes;
-    };
     const [availableTimes, dispatchAvailableTimes] = useReducer(updateTimes, initializeTimes());
 
     return (
