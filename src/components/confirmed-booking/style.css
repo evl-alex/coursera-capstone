@@ -1,0 +1,21 @@
+.booking-confirmation {
+    .booking-confirmation-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content auto;
+        column-gap: 16px;
+        row-gap: 8px;
+
+        margin-bottom: 20px;
+
+        background-color: var(--color-secondary-3);
+        padding: 16px;
+        border-radius: 16px;
+
+        font-size: 14px;
+
+        .confirmation-title {
+            font-weight: 600;
+        }
+    }
+}

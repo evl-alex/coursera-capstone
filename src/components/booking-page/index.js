@@ -1,16 +1,7 @@
 import { useReducer, useState } from 'react';
-import { fetchAPI } from '../../utils/api'
+import { fetchAPI } from '../../utils/api';
 import { BookingForm } from '../booking-form';
 import './style.css';
-
-export const defaultTimes = [
-    '17:00',
-    '18:00',
-    '19:00',
-    '20:00',
-    '21:00',
-    '22:00',
-];
 
 const defaultValues = {
     date: '',
@@ -35,7 +26,9 @@ export const updateTimes = (state, action) => {
 };
 
 export const initializeTimes = () => {
-    return fetchAPI(new Date());
+    const result = fetchAPI(new Date());
+    console.log('--- result', result);
+    return result;
 };
 
 const BookingPage = () => {

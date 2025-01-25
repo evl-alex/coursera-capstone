@@ -1,11 +1,22 @@
 import { render, screen } from '@testing-library/react';
 import {
     BookingPage,
-    defaultTimes,
     initializeTimes,
     updateTimes,
     updateTimesActions
 } from './index';
+
+const defaultTimes = ['17:00', '18:00'];
+
+jest.mock('react-router', () => ({
+    useNavigate: jest.fn(),
+}))
+
+jest.mock('../../utils/api', () => ({
+    fetchAPI: () => defaultTimes,
+    submitAPI: () => true,
+}))
+
 
 describe('Booking Page', () => {
     test('Renders the Booking Form heading', () => {

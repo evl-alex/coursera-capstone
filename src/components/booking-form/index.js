@@ -2,13 +2,19 @@ import './style.css';
 import { useCallback } from 'react';
 import { Button } from '../common/button';
 import { updateTimesActions } from '../booking-page';
-import { submitAPI } from '../../utils/api'
+import { submitAPI } from '../../utils/api';
+import { useNavigate } from 'react-router';
 
 const BookingForm = ({ availableTimes, values, setValues, onDateChange }) => {
+    const navigate = useNavigate();
     const handleSubmit = useCallback((e) => {
         e.preventDefault();
-        submitAPI(values);
-    }, [values]);
+        const result = submitAPI(values);
+
+        if (result) {
+            navigate('confirmed', { state: values});
+        }
+    }, [values, navigate]);
 
     return (
         <form onSubmit={handleSubmit}>
