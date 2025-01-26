@@ -31,6 +31,12 @@
         font-weight: 600;
     }
 
+    .validation-error {
+        color: red;
+        display: block;
+        margin-bottom: 8px;
+    }
+
     .button {
         padding: 12px;
     }

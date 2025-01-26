@@ -12,3 +12,14 @@
     color: var(--color-primary-light);
     background-color: var(--color-primary-dark);
 }
+
+.button:disabled {
+    background-color: var(--color-secondary-2);
+    color: var(--color-primary-dark);
+}
+
+.button:disabled:hover {
+    cursor: default;
+    background-color: var(--color-secondary-2);
+    color: var(--color-primary-dark);
+}
