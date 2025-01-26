@@ -26,9 +26,7 @@ export const updateTimes = (state, action) => {
 };
 
 export const initializeTimes = () => {
-    const result = fetchAPI(new Date());
-    console.log('--- result', result);
-    return result;
+    return fetchAPI(new Date());
 };
 
 const BookingPage = () => {

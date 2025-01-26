@@ -28,7 +28,12 @@ const ConfirmedBooking = () => {
                     <span className='confirmation-title'>Time:</span>
                     <span>{state.time}</span>
                 </div>
-                <Button onClick={handleReturnClick}>Return Home</Button>
+                <Button
+                    onClick={handleReturnClick}
+                    aria-label='Navigate home'
+                >
+                    Return Home
+                </Button>
             </section>
         </main>
     )

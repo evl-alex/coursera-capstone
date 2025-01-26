@@ -27,7 +27,7 @@ const Specials = () => (
     <section className='specials section-container'>
         <div className='heading'>
             <h2 className='title'>This week specials!</h2>
-            <Button>Online Menu</Button>
+            <Button aria-label='Navigate to Menu'>Online Menu</Button>
         </div>
         <div className='specials-cards'>
             {dishes.map((dish, index) => <DishCard {...dish} key={index} />)}

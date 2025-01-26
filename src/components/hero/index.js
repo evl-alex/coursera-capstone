@@ -20,7 +20,12 @@ const Hero = () => {
                         We are a family owned Mediterranean restaurant, focused on
                         traditional recipes served with a modern twist.
                     </p>
-                    <Button onClick={handleReserveButtonCLick}>Reserve a Table</Button>
+                    <Button
+                        onClick={handleReserveButtonCLick}
+                        aria-label='Navigate to table reservation'
+                    >
+                        Reserve a Table
+                    </Button>
                 </div>
                 <img src='/img/food.jpg' alt='Food'/>
             </div>

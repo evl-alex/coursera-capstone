@@ -87,6 +87,7 @@ const BookingForm = ({ availableTimes, values, setValues, onDateChange }) => {
             <Button
                 type='submit'
                 disabled={!isDateValid}
+                aria-label='Submit Reservation'
             >
                 Make Your Reservation
             </Button>
